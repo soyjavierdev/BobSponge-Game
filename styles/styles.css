@@ -1,0 +1,48 @@
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: sans-serif;
+    /* background-image: url("./../images/bobygary.jpg"); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around; 
+}
+
+.side {
+    width: 20%;
+    padding: 12rem 0;
+    background-image: url("./../images/logobob.png");
+    background-repeat: no-repeat;
+    background-size: 100%; 
+}
+
+ol {
+    text-align: left;
+}
+
+#game-board {
+    background-color: black;
+}
+
+#game-info {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    color: white;
+}
+
+button {
+    color: white;
+    background-color: black;
+    padding: .5rem 2rem;
+}

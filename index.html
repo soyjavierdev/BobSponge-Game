@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPONGEBOB GAME</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+    <main>
+        <div class="side">
+            <h1>Sponge Bob</br>Square Pants</br>Game</h1>
+            <button id="startButton">Start</button>
+        </div>
+
+        <div>
+            <audio src="audio/sonido_burbuja.mp3" id="audioShoot"></audio>
+            <audio src="audio/splash.mp3" id="audioCollision"></audio>
+            <audio src="audio/music.mp3" id="audioBob"></audio>
+        </div>
+
+        <div id="game-board">
+            <div id="game-info">
+                <h3>Lives: <span id="lives"> 3 </span></h3>
+                <h3>High score: <span id="high"> 0 </span></h3>
+                <h3>Score: <span id="score"> 0 </span></h3>
+            </div>
+
+            <canvas id="canvas" ></canvas>
+        </div>
+
+        <div class="side">
+            <h2>Instructions</h2>
+            <ol>
+                <li>Click start</li>
+                <li>Press Arrow Left/Right to Move</li>
+                <li>Press S to Shoot</li>
+            </ol>
+        </div>
+    </main>
+    <script>
+        const sizeCanvas = document.getElementById("canvas")
+        sizeCanvas.setAttribute('width', window.innerWidth * .5)
+        sizeCanvas.setAttribute('height', window.innerHeight * .91)
+    </script>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="js/bullet.js"></script>
+    <script type="text/javascript" src="js/enemy.js"></script>
+    <script type="text/javascript" src="js/crazy_enemy.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
