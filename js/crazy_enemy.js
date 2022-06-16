@@ -53,7 +53,7 @@ class CrazyEnemy {
 
     move() {
         this.crazyEnemyPos.y += 5
-        if (this.crazyEnemyPos.x >= this.canvasSize.w - this.crazyEnemySize.w || this.crazyEnemyPos.x < 0) {
+        if (this.crazyEnemyPos.x >= this.canvasSize.w - this.crazyEnemySize.w - 50 || this.crazyEnemyPos.x < 0) {
             this.turnAround()
         }
 

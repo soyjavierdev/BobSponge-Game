@@ -1,27 +1,60 @@
 body {
+    font-family: 'ABeeZee', sans-serif;
     padding: 0;
     margin: 0;
     text-align: center;
-    font-family: sans-serif;
-    /* background-image: url("./../images/bobygary.jpg"); */
     background-repeat: no-repeat;
     background-size: 100%;
-    
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around; 
+    justify-content: space-around;
+    background-color: rgb(255, 200, 0);
+}
+
+#game-info {
+    display: flex;
+    font-size: 1rem;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    color: white;
 }
 
 .side {
     width: 20%;
-    padding: 12rem 0;
-    background-image: url("./../images/logobob.png");
     background-repeat: no-repeat;
-    background-size: 100%; 
+    background-size: 100%;
+}
+
+.side h2 {
+    background-color: #3d9fdf;
+    font-size: 2rem;
+    color: white;
+}
+
+.start {
+    margin-top: 9rem;
+    padding: 12rem 0;
+    margin-left: 2rem;
+    background-image: url("./../images/background.png");
+}
+
+#startButton {
+    font-family: 'ABeeZee', sans-serif;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    letter-spacing: .3rem;
+    margin-top: 1rem;
+    background-color: #3d9fdf;
+    border: none;
+    padding: .5rem 3rem;
 }
 
 ol {
@@ -29,20 +62,28 @@ ol {
 }
 
 #game-board {
-    background-color: black;
-}
-
-#game-info {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2rem;
-    color: white;
+    background-color: #4dbfce;
 }
 
 button {
     color: white;
     background-color: black;
     padding: .5rem 2rem;
+}
+
+.side {
+    text-decoration: none;
+    color: #2f0d9e;
+    text-align: center;
+    clear: right;
+}
+
+.side .instructions {
+    display: flex;
+    flex-direction: row;
+}
+
+.patricio img {
+    width: 60%;
+    padding-top: 3rem;
 }

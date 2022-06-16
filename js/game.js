@@ -194,12 +194,13 @@ const game = {
         if (collisionCrazyEnemyResult.hasCollided)
             this.crazyEnemies.splice(collisionCrazyEnemyResult.idxCrazyEnemy, 1)
 
-        if (this.player.playerBackgroundColor === 'red')
-            this.player.playerBackgroundColor = 'black'
+        /* if (this.player.playerBackgroundColor === 'red')
+            this.player.playerBackgroundColor = 'black' */
 
         if (collisionEnemyResult.hasCollided || collisionCrazyEnemyResult.hasCollided) {
             this.player.lives--
-            this.player.playerBackgroundColor = 'red'
+            this.soundLostLife()
+            // this.player.playerBackgroundColor = 'red'
         }
 
         if (this.player.lives <= 0)
@@ -238,11 +239,11 @@ const game = {
     },
 
     printGameOver() {
-        this.ctx.fillStyle = 'black'
-        this.ctx.fillRect (this.canvasSize.w / 2 - this.canvasSize.w / 2.3, this.canvasSize.h / 2 - 125, 550, 200)
+        //this.ctx.fillStyle = 'white'
+        //this.ctx.fillRect (this.canvasSize.w / 2 - this.canvasSize.w / 2.3, this.canvasSize.h / 2 - 125, 550, 200)
         let text = 'GAME OVER!'
-        this.ctx.font = '80px Arial'
-        this.ctx.fillStyle = 'white'
+        this.ctx.font = 'bold 80px Arial'
+        this.ctx.fillStyle = 'black'
         let x = this.canvasSize.w / 2 - this.canvasSize.w / 2.5
         let y = this.canvasSize.h / 2
         this.ctx.fillText(text, x, y)
@@ -253,9 +254,19 @@ const game = {
         audioElement.play();
     },
 
-    audioBob(){
+    soundLostLife() {
+        let audioLostLife = document.getElementById("lostLife")
+        audioLostLife.play()
+    },
+
+    audioBob() {
         let bobMusic = document.getElementById("audioBob")
         bobMusic.play()
+    },
+
+    audioGameOver() {
+        let audioGameOver = document.getElementById("gameOver")
+        audioGameOver.play()
     },
 
     pauseAudioBob() {
@@ -267,6 +278,7 @@ const game = {
         this.printHighScore()
         this.printGameOver()
         this.pauseAudioBob()
+        this.audioGameOver()
         clearInterval(this.interval)
     }
 
