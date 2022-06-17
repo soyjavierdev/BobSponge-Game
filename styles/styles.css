@@ -46,10 +46,10 @@ main {
     background-image: url("./../images/background.png");
 }
 
-.patricio {
+/* .patricio {
     background-image: url("./../images/patricio.png");
     background-repeat: no-repeat;
-}
+} */
 
 #startButton {
     font-family: 'ABeeZee', sans-serif;
