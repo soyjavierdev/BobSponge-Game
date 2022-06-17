@@ -46,6 +46,11 @@ main {
     background-image: url("./../images/background.png");
 }
 
+.patricio {
+    background-image: url("./../images/patricio.png");
+    background-repeat: no-repeat;
+}
+
 #startButton {
     font-family: 'ABeeZee', sans-serif;
     font-weight: bolder;

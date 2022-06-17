@@ -53,7 +53,7 @@ class Player {
     }
 
     shootBullets() {
-        if (this.bullets.length < 5) {
+        if (this.bullets.length < 3) {
             this.bullets.push(new Bullet(this.ctx, this.playerPos.x, this.playerPos.y, this.playerSize.w, this.playerSize.h, this.canvasSize))
             this.audioShootBullets()
         }
